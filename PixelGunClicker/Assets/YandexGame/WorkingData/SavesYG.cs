@@ -1,6 +1,4 @@
-﻿
-using UnityEngine;
-
+﻿using UnityEngine;
 namespace YG
 {
     [System.Serializable]
@@ -19,18 +17,18 @@ namespace YG
         public bool[] openLevels = new bool[10];
 
 
-
-
-
         public int RewardForClick = 1;
-        public int Money = 0;                       // Можно задать полям значения по умолчанию
+        public int Money = 0;
         public int Clicks = 0;
         public bool[] GunsAvailability = new bool[10];
-
-        // Вы можете выполнить какие то действия при загрузке сохранений
+        public int UpgradeCost = 1000;
+        public int MoneyRewardForAd = 300;
+        public int ClickRewardForAd = 300;
         public SavesYG()
         {
-            
+            GunsAvailability[0] = true;
+            for (int i = 1; i < GunsAvailability.Length; i++)
+                GunsAvailability[i] = false;
         }
     }
 }

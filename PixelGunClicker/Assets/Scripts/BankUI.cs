@@ -1,49 +1,60 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 public class BankUI : Bank
 {
     [SerializeField] private Button buyUpgarde;
     [SerializeField] private Button adForMoney;
     [SerializeField] private Button adForClicks;
     [SerializeField] private Button gun;
+    [SerializeField] private TMP_Text moneyRewardForAdText;
+    [SerializeField] private TMP_Text clickRewardForAdText;
+    [SerializeField] private TMP_Text upgradeCostText;
     [SerializeField] private TMP_Text moneyText;
     [SerializeField] private TMP_Text clicksText;
     private void Start()
     {
+        InitializeUI();
         gun.onClick.AddListener(HandleGunClick);
-        adForClicks.onClick.AddListener(() => HandleVideoClick(false));
-        adForMoney.onClick.AddListener(() => HandleVideoClick(true));
-        buyUpgarde.onClick.AddListener(HandlePurchase);
+        buyUpgarde.onClick.AddListener(HandlePurchaseClick);
+        adForClicks.onClick.AddListener(() => YandexGame.RewVideoShow(0));
+        adForMoney.onClick.AddListener(() => YandexGame.RewVideoShow(1));
+        YandexGame.RewardVideoEvent += GiveReward;
     }
     private void HandleGunClick()
     {
-        UpdateUIState(
-            IncreaseClicks(RewardForClick), 
-            IncreaseMoney(RewardForClick));
+        IncreaseClicks(RewardForClick);
+        IncreaseMoney(RewardForClick);
+        UpdateScoreUI();
     }
-    private void HandleVideoClick(bool isForMoney)
+    private void GiveReward(int id)
     {
-        if (isForMoney)
-            UpdateUIState(IncreaseMoney(MoneyRewardForAd), isForMoney);
+        if (id == 0)
+            IncreaseMoney(ClickRewardForAd);
         else
-            UpdateUIState(IncreaseClicks(ClickRewardForAd), isForMoney);
-
+            IncreaseClicks(MoneyRewardForAd);
+        UpdateScoreUI();
     }
-    private void HandlePurchase()
+    private void HandlePurchaseClick()
     {
-        UpdateUIState(TryBuyUpgrade(), true); ;
+        if(TryBuyUpgrade())
+            UpdateCostUIState();
     }
-    private void UpdateUIState(int value, bool isForMoney)
+    private void InitializeUI()
     {
-        if (isForMoney)
-            moneyText.text = value.ToString();
-        else
-            clicksText.text = value.ToString();
+        UpdateCostUIState();
+        UpdateScoreUI();
     }
-    private void UpdateUIState(int clickValue, int moneyValue)
+    private void UpdateScoreUI()
     {
-        clicksText.text = clickValue.ToString();
-        moneyText.text = moneyValue.ToString();
+        moneyText.text = Money.ToString();
+        clicksText.text = Clicks.ToString();
+    }
+    private void UpdateCostUIState()
+    {
+        moneyRewardForAdText.text = MoneyRewardForAd.ToString();
+        clickRewardForAdText.text = ClickRewardForAd.ToString();
+        upgradeCostText.text = UpgradeCost.ToString();
     }
 }
