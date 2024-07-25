@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using YG;
 [Serializable]
 public class Gun
 {
@@ -14,6 +15,7 @@ public class Gun
     public bool IsAvailable => isAvailable;
     Gun()
     {
+        isAvailable = YandexGame.savesData.GunsAvailability[index];
         EventBus.ClicksIncreased += CheckAvailability;
     }
     private void CheckAvailability(int value)
@@ -26,5 +28,7 @@ public class Gun
         isAvailable = true;
         EventBus.ClicksIncreased -= CheckAvailability;
         EventBus.GunBecameAvailable?.Invoke();
+        YandexGame.savesData.GunsAvailability[index] = true;
+        YandexGame.SaveProgress();
     }
 }

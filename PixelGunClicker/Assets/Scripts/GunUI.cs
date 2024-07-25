@@ -1,49 +1,55 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class GunUI : MonoBehaviour
 {
+    [SerializeField] private TMP_Text costOfLockedGun;
+    [SerializeField] private Image lockedGun;
     [SerializeField] private Image selectedGun;
     [SerializeField] private Button next;
     [SerializeField] private Button prev;
     [SerializeField] private Gun[] guns;
-    private int gunIndex = 0;
+    private int currentGunIndex = 0;
     private void Start()
     {
-        HandleChange(0);
+        HandleButtonsState();
         next.onClick.AddListener(() => HandleChange(1));
         prev.onClick.AddListener(() => HandleChange(-1));
         EventBus.GunBecameAvailable += HandleButtonsState;
     }
     private void HandleChange(int direction)
     {
-        gunIndex += direction;
-        selectedGun.sprite = guns[gunIndex].UnlockedSprite;
+        currentGunIndex += direction;
+        selectedGun.sprite = guns[currentGunIndex].UnlockedSprite;
         HandleButtonsState();
     }
     private void HandleButtonsState()
     {
-        if (gunIndex == 0)
-        {
-            prev.gameObject.SetActive(false);
-        }
-        else if (gunIndex == guns.Length - 1)
+        if (currentGunIndex == guns.Length - 1)
         {
             next.gameObject.SetActive(false);
             return;
         }
-        else
+        if (currentGunIndex != 0)
         {
-            next.gameObject.SetActive(true);
             prev.gameObject.SetActive(true);
         }
-
-        if (guns[gunIndex + 1].IsAvailable == false)
+        else
         {
-            //Show price and locked gun image, block nextButton !!DO NOT DISABLE GAMEOBJECT
+            prev.gameObject.SetActive(false);
+        }    
+
+        if (guns[currentGunIndex + 1].IsAvailable)
+        {
+            //Hide price and locked gun image
+            next.gameObject.SetActive(true);
         }
         else
         {
-            //Hide price and locked gun image, unblock nextButton
+            //Show price and locked gun image
+            costOfLockedGun.text = guns[currentGunIndex + 1].Cost.ToString();
+            lockedGun.sprite = guns[currentGunIndex + 1].LockedSprite;
+            next.gameObject.SetActive(false);
         }
     }
 }

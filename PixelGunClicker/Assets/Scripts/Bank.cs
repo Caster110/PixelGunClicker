@@ -17,22 +17,26 @@ public class Bank : MonoBehaviour
     protected int IncreaseClicks(int value)
     {
         clicks += value;
+        YandexGame.savesData.Clicks = clicks;
         EventBus.ClicksIncreased?.Invoke(clicks);
         return clicks;
     }
     protected int IncreaseMoney(int value) 
     {
         money += value;
+        YandexGame.savesData.Money = money;
         return money;
     }
-    protected virtual int TryBuyUpgrade()
+    protected int TryBuyUpgrade()
     {
         if (money >= upgradeCost)
         {
             money -= upgradeCost;
             RewardForClick++;
         }
-
+        YandexGame.savesData.RewardForClick = RewardForClick;
+        YandexGame.savesData.Money = money;
+        YandexGame.SaveProgress();
         return money;
     }
 }

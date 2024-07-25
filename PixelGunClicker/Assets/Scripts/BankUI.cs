@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 public class BankUI : Bank
@@ -6,6 +7,8 @@ public class BankUI : Bank
     [SerializeField] private Button adForMoney;
     [SerializeField] private Button adForClicks;
     [SerializeField] private Button gun;
+    [SerializeField] private TMP_Text moneyText;
+    [SerializeField] private TMP_Text clicksText;
     private void Start()
     {
         gun.onClick.AddListener(HandleGunClick);
@@ -15,22 +18,32 @@ public class BankUI : Bank
     }
     private void HandleGunClick()
     {
-        IncreaseClicks(RewardForClick);
-        IncreaseMoney(RewardForClick);
-        //display
+        UpdateUIState(
+            IncreaseClicks(RewardForClick), 
+            IncreaseMoney(RewardForClick));
     }
     private void HandleVideoClick(bool isForMoney)
     {
         if (isForMoney)
-            IncreaseMoney(MoneyRewardForAd);
+            UpdateUIState(IncreaseMoney(MoneyRewardForAd), isForMoney);
         else
-            IncreaseClicks(ClickRewardForAd);
-        //display
+            UpdateUIState(IncreaseClicks(ClickRewardForAd), isForMoney);
 
     }
     private void HandlePurchase()
     {
-        TryBuyUpgrade();
-        //display
+        UpdateUIState(TryBuyUpgrade(), true); ;
+    }
+    private void UpdateUIState(int value, bool isForMoney)
+    {
+        if (isForMoney)
+            moneyText.text = value.ToString();
+        else
+            clicksText.text = value.ToString();
+    }
+    private void UpdateUIState(int clickValue, int moneyValue)
+    {
+        clicksText.text = clickValue.ToString();
+        moneyText.text = moneyValue.ToString();
     }
 }

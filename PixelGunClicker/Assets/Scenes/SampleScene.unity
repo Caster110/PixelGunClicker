@@ -153,6 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5613e0cbf3e3724c952ad69539b16b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  costOfLockedGun: {fileID: 0}
+  lockedGun: {fileID: 0}
   selectedGun: {fileID: 1498302573}
   next: {fileID: 1642274846}
   prev: {fileID: 1836934643}
@@ -188,6 +190,8 @@ MonoBehaviour:
   adForMoney: {fileID: 1712372649}
   adForClicks: {fileID: 793709011}
   gun: {fileID: 1498302572}
+  moneyText: {fileID: 0}
+  clicksText: {fileID: 0}
 --- !u!1 &793709009
 GameObject:
   m_ObjectHideFlags: 0
