@@ -190,6 +190,9 @@ MonoBehaviour:
   adForMoney: {fileID: 1712372649}
   adForClicks: {fileID: 793709011}
   gun: {fileID: 1498302572}
+  moneyRewardForAdText: {fileID: 0}
+  clickRewardForAdText: {fileID: 0}
+  upgradeCostText: {fileID: 0}
   moneyText: {fileID: 0}
   clicksText: {fileID: 0}
 --- !u!1 &793709009
@@ -689,7 +692,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c64b088e057a644a3133f53b5316e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunButton: {fileID: 1498302572}
 --- !u!1 &1642274844
 GameObject:
   m_ObjectHideFlags: 0

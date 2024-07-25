@@ -18,8 +18,8 @@ public class BankUI : Bank
         InitializeUI();
         gun.onClick.AddListener(HandleGunClick);
         buyUpgarde.onClick.AddListener(HandlePurchaseClick);
-        adForClicks.onClick.AddListener(() => YandexGame.RewVideoShow(0));
-        adForMoney.onClick.AddListener(() => YandexGame.RewVideoShow(1));
+        adForMoney.onClick.AddListener(() => YandexGame.RewVideoShow(0));
+        adForClicks.onClick.AddListener(() => YandexGame.RewVideoShow(1));
         YandexGame.RewardVideoEvent += GiveReward;
     }
     private void HandleGunClick()
@@ -31,19 +31,19 @@ public class BankUI : Bank
     private void GiveReward(int id)
     {
         if (id == 0)
-            IncreaseMoney(ClickRewardForAd);
+            IncreaseMoney(MoneyRewardForAd);
         else
-            IncreaseClicks(MoneyRewardForAd);
+            IncreaseClicks(ClickRewardForAd);
         UpdateScoreUI();
     }
     private void HandlePurchaseClick()
     {
         if(TryBuyUpgrade())
-            UpdateCostUIState();
+            UpdateCostUI();
     }
     private void InitializeUI()
     {
-        UpdateCostUIState();
+        UpdateCostUI();
         UpdateScoreUI();
     }
     private void UpdateScoreUI()
@@ -51,7 +51,7 @@ public class BankUI : Bank
         moneyText.text = Money.ToString();
         clicksText.text = Clicks.ToString();
     }
-    private void UpdateCostUIState()
+    private void UpdateCostUI()
     {
         moneyRewardForAdText.text = MoneyRewardForAd.ToString();
         clickRewardForAdText.text = ClickRewardForAd.ToString();
