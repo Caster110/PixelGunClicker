@@ -1,4 +1,6 @@
 ﻿
+using UnityEngine;
+
 namespace YG
 {
     [System.Serializable]
@@ -12,23 +14,23 @@ namespace YG
 
         // Тестовые сохранения для демо сцены
         // Можно удалить этот код, но тогда удалите и демо (папка Example)
-        public int money = 1;                       // Можно задать полям значения по умолчанию
-        public string newPlayerName = "Hello!";
-        public bool[] openLevels = new bool[3];
+        public int money;
+        public string newPlayerName;
+        public bool[] openLevels = new bool[10];
 
-        // Ваши сохранения
 
-        // ...
 
-        // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 
+
+        public int RewardForClick = 1;
+        public int Money = 0;                       // Можно задать полям значения по умолчанию
+        public int Clicks = 0;
+        public bool[] GunsAvailability = new bool[10];
 
         // Вы можете выполнить какие то действия при загрузке сохранений
         public SavesYG()
         {
-            // Допустим, задать значения по умолчанию для отдельных элементов массива
-
-            openLevels[1] = true;
+            
         }
     }
 }
