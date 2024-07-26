@@ -36,9 +36,9 @@ MonoBehaviour:
   saveCloudInterval: 5
   saveOnQuitGame: 1
   quitGameParameters:
-    objectName: YandexGame
-    methodName: _SaveProgress
-  leaderboardEnable: 0
+    objectName: ProgressSaver
+    methodName: SaveProgress
+  leaderboardEnable: 1
   saveScoreAnonymousPlayers: 1
   leaderboardSimulation:
   - technoName: advanced

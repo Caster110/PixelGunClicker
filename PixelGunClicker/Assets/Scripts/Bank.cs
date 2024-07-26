@@ -7,7 +7,7 @@ public class Bank : MonoBehaviour
     public int ClickRewardForAd { get; private set; }
     public int UpgradeCost { get; private set; }
     public int Money { get; private set; }
-    public int Clicks { get; private set; }
+    public static int Clicks { get; private set; }
     private void Start()
     {
         Money = YandexGame.savesData.Money;
