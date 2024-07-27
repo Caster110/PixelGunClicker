@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 public class GunUI : MonoBehaviour
 {
     [SerializeField] private TMP_Text costOfLockedGun;
@@ -13,7 +14,9 @@ public class GunUI : MonoBehaviour
     [SerializeField] private AudioClip[] gunSounds;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private Animator gunAnimator;
+    [SerializeField] private Image muzzleFlashImage;
     private int currentGunIndex = 0;
+    private Coroutine muzzleFlashCoroutine;
     private void Start()
     {
         gun.onClick.AddListener(HandleGunClick);
@@ -62,6 +65,7 @@ public class GunUI : MonoBehaviour
     private void HandleGunClick()
     {
         PlaySound(currentGunIndex);
+        ShowMuzzleFlash(currentGunIndex);
         PlayRecoilAnimation();
     }
     private void PlaySound(int index)
@@ -72,5 +76,41 @@ public class GunUI : MonoBehaviour
     private void PlayRecoilAnimation()
     {
         gunAnimator.Play("FireAnim", 0, 0f);
+    }
+    private void ShowMuzzleFlash(int index)
+    {
+        if (muzzleFlashCoroutine != null)
+        {
+            StopCoroutine(muzzleFlashCoroutine);
+        }
+
+        var gun = guns[index];
+        SetMuzzleFlash(guns[index].MuzzleFlashPositions, guns[index].MuzzleFlashColors);
+    }
+
+    private void SetMuzzleFlash(Vector2 position, Color color)
+    {
+        muzzleFlashImage.rectTransform.anchoredPosition = position;
+        muzzleFlashImage.color = color;
+        muzzleFlashImage.enabled = true;
+
+        muzzleFlashCoroutine = StartCoroutine(FadeOutMuzzleFlash());
+    }
+
+    private IEnumerator FadeOutMuzzleFlash()
+    {
+        float duration = 0.13f; 
+        float elapsed = 0f;
+        Color initialColor = muzzleFlashImage.color;
+        Color targetColor = new Color(initialColor.r, initialColor.g, initialColor.b, 0f);
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            muzzleFlashImage.color = Color.Lerp(initialColor, targetColor, elapsed / duration);
+            yield return null;
+        }
+
+        muzzleFlashImage.enabled = false;
     }
 }

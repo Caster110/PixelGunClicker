@@ -374,66 +374,106 @@ MonoBehaviour:
     locked: {fileID: 21300000, guid: f01a020e2f2081245a4abcb6574c8296, type: 3}
     cost: 0
     isAvailable: 0
+    muzzleFlashPositions: {x: 311, y: 96}
+    muzzleFlashColors: {r: 0.9796242, g: 1, b: 0.4575472, a: 1}
   - index: 1
     unlocked: {fileID: 21300000, guid: 86a39ae2f26809e42ad3de4c6bbe537c, type: 3}
     locked: {fileID: 21300000, guid: 4990f5e6caa10e047876ac72cd84e3ab, type: 3}
     cost: 5
     isAvailable: 0
+    muzzleFlashPositions: {x: 359, y: 15}
+    muzzleFlashColors: {r: 0, g: 1, b: 0.50980395, a: 1}
   - index: 2
     unlocked: {fileID: 21300000, guid: f06dd8683c381194cb09e9875c73a01e, type: 3}
     locked: {fileID: 21300000, guid: 3217b288bbd131849935bf9b94d4f629, type: 3}
     cost: 10
     isAvailable: 0
+    muzzleFlashPositions: {x: 316, y: 15}
+    muzzleFlashColors: {r: 1, g: 0, b: 0, a: 1}
   - index: 3
     unlocked: {fileID: 21300000, guid: 0274a6e6aec464a42bcf615edbfdca84, type: 3}
     locked: {fileID: 21300000, guid: 3a3e82bd1421c49469b59da7f7241de2, type: 3}
     cost: 15
     isAvailable: 0
+    muzzleFlashPositions: {x: 293, y: 33}
+    muzzleFlashColors: {r: 0, g: 0.56078434, b: 1, a: 1}
   - index: 4
     unlocked: {fileID: 21300000, guid: b6fe60e448a2ccf469469ebb53d033df, type: 3}
     locked: {fileID: 21300000, guid: e9ea6fbfbc0582b4988142330536c1c4, type: 3}
     cost: 20
     isAvailable: 0
+    muzzleFlashPositions: {x: 348, y: 24}
+    muzzleFlashColors: {r: 1, g: 0, b: 0.7607844, a: 1}
   - index: 5
     unlocked: {fileID: 21300000, guid: be09725096c0636408b3c3c26c5cc526, type: 3}
     locked: {fileID: 21300000, guid: 485e1f66328c0544d8f0132e2fbb18d1, type: 3}
     cost: 25
     isAvailable: 0
+    muzzleFlashPositions: {x: 0, y: 0}
+    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
   - index: 6
     unlocked: {fileID: 21300000, guid: 27acbd5e46c6942488ffd56fdbe8da51, type: 3}
     locked: {fileID: 21300000, guid: 068b730887160cd489f329bea586fccb, type: 3}
     cost: 30
     isAvailable: 0
+    muzzleFlashPositions: {x: 0, y: 0}
+    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
   - index: 7
     unlocked: {fileID: 21300000, guid: 1e4c4e84ad6060940a670ba8aabadad1, type: 3}
     locked: {fileID: 21300000, guid: 8f03ccb95d8585b48864f9a8e9ed46a8, type: 3}
     cost: 35
     isAvailable: 0
+    muzzleFlashPositions: {x: 0, y: 0}
+    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
   - index: 8
     unlocked: {fileID: 21300000, guid: 54f8f3e7a0209014aa8ebfed7b8483e3, type: 3}
     locked: {fileID: 21300000, guid: e7db58771ed7ee24bbdbd3940113d100, type: 3}
     cost: 40
     isAvailable: 0
+    muzzleFlashPositions: {x: 0, y: 0}
+    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
   - index: 9
     unlocked: {fileID: 21300000, guid: 1ca808a5d25980a4eb07627337f51a48, type: 3}
     locked: {fileID: 21300000, guid: 2a8dea36f09fd5346bf0cc0a3ddd4c4b, type: 3}
     cost: 50
     isAvailable: 0
+    muzzleFlashPositions: {x: 0, y: 0}
+    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
   - index: 10
     unlocked: {fileID: 21300000, guid: e06939d0a9f21504b8a02d49a43244a8, type: 3}
     locked: {fileID: 21300000, guid: b7074c1d31995fb42960766b8095e42a, type: 3}
     cost: 60
     isAvailable: 0
+    muzzleFlashPositions: {x: 0, y: 0}
+    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
   - index: 11
     unlocked: {fileID: 21300000, guid: 02ff7305d84ca0649a1794b9cff03707, type: 3}
     locked: {fileID: 21300000, guid: e60746d4dead18642b3ab007e03b8bde, type: 3}
     cost: 70
     isAvailable: 0
+    muzzleFlashPositions: {x: 0, y: 0}
+    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
   - index: 12
     unlocked: {fileID: 21300000, guid: 51d60b90370040b419214ecf14e5ddd7, type: 3}
     locked: {fileID: 21300000, guid: b142662f5ec72844497972fcfae2aa4c, type: 3}
     cost: 80
     isAvailable: 0
+    muzzleFlashPositions: {x: 0, y: 0}
+    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
+  - index: 13
+    unlocked: {fileID: 21300000, guid: edcaaf1a4c382de4eab78e73c4afbd3b, type: 3}
+    locked: {fileID: 21300000, guid: e7247945eb4988948a25c2fea41158c6, type: 3}
+    cost: 90
+    isAvailable: 0
+    muzzleFlashPositions: {x: 0, y: 0}
+    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
+  - index: 14
+    unlocked: {fileID: 21300000, guid: b05859cb4880fb642915678c3f9e7690, type: 3}
+    locked: {fileID: 21300000, guid: 5522fe572b2206d45b42803ceed94031, type: 3}
+    cost: 100
+    isAvailable: 0
+    muzzleFlashPositions: {x: 0, y: 0}
+    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
   gunSounds:
   - {fileID: 8300000, guid: bde293c5466b6cf4682036a38a7c82b0, type: 3}
   - {fileID: 8300000, guid: d333a3b69f4f29541904ad8f1c78a784, type: 3}
@@ -452,6 +492,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f5044cc10930f4c4aad0f9e8a098f3aa, type: 3}
   audioSource: {fileID: 1651512809}
   gunAnimator: {fileID: 1498302575}
+  muzzleFlashImage: {fileID: 1298312751}
 --- !u!4 &290023644
 Transform:
   m_ObjectHideFlags: 0
@@ -952,6 +993,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017104631}
   m_CullTransparentMesh: 1
+--- !u!1 &1298312749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1298312750}
+  - component: {fileID: 1298312752}
+  - component: {fileID: 1298312751}
+  m_Layer: 5
+  m_Name: Flash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1298312750
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298312749}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1458050646}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1440, y: 276.66}
+  m_SizeDelta: {x: 457.968, y: 457.968}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1298312751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298312749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: da2c21d6798fcfa4db268a10ac53ca5d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1298312752
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298312749}
+  m_CullTransparentMesh: 1
 --- !u!1 &1422950904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,7 +1213,7 @@ Canvas:
   m_GameObject: {fileID: 1458050642}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1126,13 +1242,14 @@ RectTransform:
   - {fileID: 454860154}
   - {fileID: 1483933952}
   - {fileID: 1422950905}
-  - {fileID: 1498302571}
   - {fileID: 1836934642}
   - {fileID: 1914238958}
   - {fileID: 1642274845}
   - {fileID: 1777512905}
   - {fileID: 1712372648}
   - {fileID: 793709010}
+  - {fileID: 1498302571}
+  - {fileID: 1298312750}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
