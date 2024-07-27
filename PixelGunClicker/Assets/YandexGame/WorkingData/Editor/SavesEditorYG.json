@@ -1,0 +1,38 @@
+{
+    "idSave": 861,
+    "isFirstSession": false,
+    "language": "en",
+    "promptDone": false,
+    "money": 0,
+    "newPlayerName": "",
+    "openLevels": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+    ],
+    "RewardForClick": 2,
+    "Money": 220,
+    "Clicks": 326,
+    "GunsAvailability": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+    ],
+    "UpgradeCost": 1100,
+    "MoneyRewardForAd": 300,
+    "ClickRewardForAd": 300
+}
