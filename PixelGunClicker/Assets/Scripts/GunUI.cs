@@ -12,6 +12,7 @@ public class GunUI : MonoBehaviour
     [SerializeField] private Gun[] guns;
     [SerializeField] private AudioClip[] gunSounds;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private Animator gunAnimator;
     private int currentGunIndex = 0;
     private void Start()
     {
@@ -61,10 +62,15 @@ public class GunUI : MonoBehaviour
     private void HandleGunClick()
     {
         PlaySound(currentGunIndex);
+        PlayRecoilAnimation();
     }
     private void PlaySound(int index)
     {
         audioSource.clip = gunSounds[index];
         audioSource.Play();
+    }
+    private void PlayRecoilAnimation()
+    {
+        gunAnimator.Play("FireAnim", 0, 0f);
     }
 }

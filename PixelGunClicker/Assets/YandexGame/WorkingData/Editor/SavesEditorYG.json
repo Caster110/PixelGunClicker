@@ -1,5 +1,5 @@
 {
-    "idSave": 861,
+    "idSave": 1013,
     "isFirstSession": false,
     "language": "en",
     "promptDone": false,
@@ -18,8 +18,8 @@
         false
     ],
     "RewardForClick": 2,
-    "Money": 220,
-    "Clicks": 326,
+    "Money": 49,
+    "Clicks": 50,
     "GunsAvailability": [
         true,
         true,

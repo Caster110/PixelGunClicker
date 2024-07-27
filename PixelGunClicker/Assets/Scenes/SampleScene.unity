@@ -451,6 +451,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 52fb8991665c09e4eb7a37a7a14d0a59, type: 3}
   - {fileID: 8300000, guid: f5044cc10930f4c4aad0f9e8a098f3aa, type: 3}
   audioSource: {fileID: 1651512809}
+  gunAnimator: {fileID: 1498302575}
 --- !u!4 &290023644
 Transform:
   m_ObjectHideFlags: 0
@@ -1365,6 +1366,7 @@ GameObject:
   - component: {fileID: 1498302574}
   - component: {fileID: 1498302573}
   - component: {fileID: 1498302572}
+  - component: {fileID: 1498302575}
   m_Layer: 5
   m_Name: GunButton
   m_TagString: Untagged
@@ -1474,6 +1476,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498302570}
   m_CullTransparentMesh: 1
+--- !u!95 &1498302575
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498302570}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d8e31bb8d5195f24c8552d96a6cd02ab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1532269612
 GameObject:
   m_ObjectHideFlags: 0
