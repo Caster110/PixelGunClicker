@@ -15,7 +15,7 @@ public class BankUI : Bank
     [SerializeField] private TMP_Text clicksText;
     private void Start()
     {
-        InitializeUI();
+        UpdateAllUI();
         gun.onClick.AddListener(HandleGunClick);
         buyUpgarde.onClick.AddListener(HandlePurchaseClick);
         adForMoney.onClick.AddListener(() => YandexGame.RewVideoShow(0));
@@ -39,9 +39,9 @@ public class BankUI : Bank
     private void HandlePurchaseClick()
     {
         if(TryBuyUpgrade())
-            UpdateCostUI();
+            UpdateAllUI();
     }
-    private void InitializeUI()
+    private void UpdateAllUI()
     {
         UpdateCostUI();
         UpdateScoreUI();

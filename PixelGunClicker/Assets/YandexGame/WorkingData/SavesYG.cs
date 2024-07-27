@@ -20,8 +20,8 @@ namespace YG
         public int RewardForClick = 1;
         public int Money = 0;
         public int Clicks = 0;
-        public bool[] GunsAvailability = new bool[10];
-        public int UpgradeCost = 1000;
+        public bool[] GunsAvailability = new bool[15];
+        public int UpgradeCost = 100;
         public int MoneyRewardForAd = 300;
         public int ClickRewardForAd = 300;
         public SavesYG()

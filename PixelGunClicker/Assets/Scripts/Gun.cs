@@ -9,10 +9,14 @@ public class Gun
     [SerializeField] private Sprite locked;
     [SerializeField] private int cost;
     [SerializeField] private bool isAvailable;
+    [SerializeField] private Vector2 muzzleFlashPositions;
+    [SerializeField] private Color muzzleFlashColors;
     public Sprite UnlockedSprite => unlocked;
     public Sprite LockedSprite => locked;
     public int Cost => cost;
     public bool IsAvailable => isAvailable;
+    public Vector2 MuzzleFlashPositions => muzzleFlashPositions;
+    public Color MuzzleFlashColors => muzzleFlashColors;
     Gun()
     {
         isAvailable = YandexGame.savesData.GunsAvailability[index];
