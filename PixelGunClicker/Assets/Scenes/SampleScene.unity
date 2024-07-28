@@ -341,8 +341,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 290023644}
-  - component: {fileID: 290023643}
   - component: {fileID: 290023645}
+  - component: {fileID: 290023646}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -350,149 +350,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &290023643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 290023642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5613e0cbf3e3724c952ad69539b16b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  costOfLockedGun: {fileID: 1648631386}
-  lockedGun: {fileID: 1914238959}
-  selectedGun: {fileID: 1498302573}
-  next: {fileID: 1642274846}
-  prev: {fileID: 1836934643}
-  gun: {fileID: 1498302572}
-  guns:
-  - index: 0
-    unlocked: {fileID: 21300000, guid: 3d6796f3277489a448d6e8a6aab84d8e, type: 3}
-    locked: {fileID: 21300000, guid: f01a020e2f2081245a4abcb6574c8296, type: 3}
-    cost: 0
-    isAvailable: 0
-    muzzleFlashPositions: {x: 311, y: 96}
-    muzzleFlashColors: {r: 0.9796242, g: 1, b: 0.4575472, a: 1}
-  - index: 1
-    unlocked: {fileID: 21300000, guid: 86a39ae2f26809e42ad3de4c6bbe537c, type: 3}
-    locked: {fileID: 21300000, guid: 4990f5e6caa10e047876ac72cd84e3ab, type: 3}
-    cost: 5
-    isAvailable: 0
-    muzzleFlashPositions: {x: 359, y: 15}
-    muzzleFlashColors: {r: 0, g: 1, b: 0.50980395, a: 1}
-  - index: 2
-    unlocked: {fileID: 21300000, guid: f06dd8683c381194cb09e9875c73a01e, type: 3}
-    locked: {fileID: 21300000, guid: 3217b288bbd131849935bf9b94d4f629, type: 3}
-    cost: 10
-    isAvailable: 0
-    muzzleFlashPositions: {x: 316, y: 15}
-    muzzleFlashColors: {r: 1, g: 0, b: 0, a: 1}
-  - index: 3
-    unlocked: {fileID: 21300000, guid: 0274a6e6aec464a42bcf615edbfdca84, type: 3}
-    locked: {fileID: 21300000, guid: 3a3e82bd1421c49469b59da7f7241de2, type: 3}
-    cost: 15
-    isAvailable: 0
-    muzzleFlashPositions: {x: 293, y: 33}
-    muzzleFlashColors: {r: 0, g: 0.56078434, b: 1, a: 1}
-  - index: 4
-    unlocked: {fileID: 21300000, guid: b6fe60e448a2ccf469469ebb53d033df, type: 3}
-    locked: {fileID: 21300000, guid: e9ea6fbfbc0582b4988142330536c1c4, type: 3}
-    cost: 20
-    isAvailable: 0
-    muzzleFlashPositions: {x: 348, y: 24}
-    muzzleFlashColors: {r: 1, g: 0, b: 0.7607844, a: 1}
-  - index: 5
-    unlocked: {fileID: 21300000, guid: be09725096c0636408b3c3c26c5cc526, type: 3}
-    locked: {fileID: 21300000, guid: 485e1f66328c0544d8f0132e2fbb18d1, type: 3}
-    cost: 25
-    isAvailable: 0
-    muzzleFlashPositions: {x: 0, y: 0}
-    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
-  - index: 6
-    unlocked: {fileID: 21300000, guid: 27acbd5e46c6942488ffd56fdbe8da51, type: 3}
-    locked: {fileID: 21300000, guid: 068b730887160cd489f329bea586fccb, type: 3}
-    cost: 30
-    isAvailable: 0
-    muzzleFlashPositions: {x: 0, y: 0}
-    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
-  - index: 7
-    unlocked: {fileID: 21300000, guid: 1e4c4e84ad6060940a670ba8aabadad1, type: 3}
-    locked: {fileID: 21300000, guid: 8f03ccb95d8585b48864f9a8e9ed46a8, type: 3}
-    cost: 35
-    isAvailable: 0
-    muzzleFlashPositions: {x: 0, y: 0}
-    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
-  - index: 8
-    unlocked: {fileID: 21300000, guid: 54f8f3e7a0209014aa8ebfed7b8483e3, type: 3}
-    locked: {fileID: 21300000, guid: e7db58771ed7ee24bbdbd3940113d100, type: 3}
-    cost: 40
-    isAvailable: 0
-    muzzleFlashPositions: {x: 0, y: 0}
-    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
-  - index: 9
-    unlocked: {fileID: 21300000, guid: 1ca808a5d25980a4eb07627337f51a48, type: 3}
-    locked: {fileID: 21300000, guid: 2a8dea36f09fd5346bf0cc0a3ddd4c4b, type: 3}
-    cost: 50
-    isAvailable: 0
-    muzzleFlashPositions: {x: 0, y: 0}
-    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
-  - index: 10
-    unlocked: {fileID: 21300000, guid: e06939d0a9f21504b8a02d49a43244a8, type: 3}
-    locked: {fileID: 21300000, guid: b7074c1d31995fb42960766b8095e42a, type: 3}
-    cost: 60
-    isAvailable: 0
-    muzzleFlashPositions: {x: 0, y: 0}
-    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
-  - index: 11
-    unlocked: {fileID: 21300000, guid: 02ff7305d84ca0649a1794b9cff03707, type: 3}
-    locked: {fileID: 21300000, guid: e60746d4dead18642b3ab007e03b8bde, type: 3}
-    cost: 70
-    isAvailable: 0
-    muzzleFlashPositions: {x: 0, y: 0}
-    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
-  - index: 12
-    unlocked: {fileID: 21300000, guid: 51d60b90370040b419214ecf14e5ddd7, type: 3}
-    locked: {fileID: 21300000, guid: b142662f5ec72844497972fcfae2aa4c, type: 3}
-    cost: 80
-    isAvailable: 0
-    muzzleFlashPositions: {x: 0, y: 0}
-    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
-  - index: 13
-    unlocked: {fileID: 21300000, guid: edcaaf1a4c382de4eab78e73c4afbd3b, type: 3}
-    locked: {fileID: 21300000, guid: e7247945eb4988948a25c2fea41158c6, type: 3}
-    cost: 90
-    isAvailable: 0
-    muzzleFlashPositions: {x: 0, y: 0}
-    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
-  - index: 14
-    unlocked: {fileID: 21300000, guid: b05859cb4880fb642915678c3f9e7690, type: 3}
-    locked: {fileID: 21300000, guid: 5522fe572b2206d45b42803ceed94031, type: 3}
-    cost: 100
-    isAvailable: 0
-    muzzleFlashPositions: {x: 0, y: 0}
-    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
-  gunSounds:
-  - {fileID: 8300000, guid: bde293c5466b6cf4682036a38a7c82b0, type: 3}
-  - {fileID: 8300000, guid: d333a3b69f4f29541904ad8f1c78a784, type: 3}
-  - {fileID: 8300000, guid: 658a62f699aa3cb44bf4e5126cc9cc3b, type: 3}
-  - {fileID: 8300000, guid: aa9e811ab688fca419d9c953a9b83f36, type: 3}
-  - {fileID: 8300000, guid: a3e7c408f23397d49b0358fe02f23cb2, type: 3}
-  - {fileID: 8300000, guid: 8be0d79ac17bc06478022b7ebc92ec1b, type: 3}
-  - {fileID: 8300000, guid: 97bc8ba282b3834408958258c7168816, type: 3}
-  - {fileID: 8300000, guid: b11e42cf49c449c4494cc8e0f83fbae1, type: 3}
-  - {fileID: 8300000, guid: 526c9510fdc827f4b9f1293d73157013, type: 3}
-  - {fileID: 8300000, guid: c939e673b00ee7e409a54de91e9f6bdf, type: 3}
-  - {fileID: 8300000, guid: 4b9d6a51db38d95468a50bd8232dbba2, type: 3}
-  - {fileID: 8300000, guid: 3bed6d18d0b580c4d8a4ab32efe0abcd, type: 3}
-  - {fileID: 8300000, guid: 710a1a1c67e8b66438e4dfa435dff720, type: 3}
-  - {fileID: 8300000, guid: 52fb8991665c09e4eb7a37a7a14d0a59, type: 3}
-  - {fileID: 8300000, guid: f5044cc10930f4c4aad0f9e8a098f3aa, type: 3}
-  audioSource: {fileID: 1651512809}
-  gunAnimator: {fileID: 1498302575}
-  muzzleFlashImage: {fileID: 1298312751}
 --- !u!4 &290023644
 Transform:
   m_ObjectHideFlags: 0
@@ -529,6 +386,133 @@ MonoBehaviour:
   upgradeCostText: {fileID: 165219043}
   moneyText: {fileID: 398813374}
   clicksText: {fileID: 1672524446}
+--- !u!114 &290023646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290023642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5613e0cbf3e3724c952ad69539b16b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  costOfLockedGun: {fileID: 1648631386}
+  lockedGun: {fileID: 1914238959}
+  selectedGun: {fileID: 1498302573}
+  next: {fileID: 1642274846}
+  prev: {fileID: 1836934643}
+  gun: {fileID: 1498302572}
+  guns:
+  - index: 0
+    unlocked: {fileID: 21300000, guid: 3d6796f3277489a448d6e8a6aab84d8e, type: 3}
+    locked: {fileID: 21300000, guid: f01a020e2f2081245a4abcb6574c8296, type: 3}
+    cost: -1
+    muzzleFlashPositions: {x: 311, y: 96}
+    muzzleFlashColors: {r: 0.9796242, g: 1, b: 0.4575472, a: 1}
+    gunSound: {fileID: 8300000, guid: bde293c5466b6cf4682036a38a7c82b0, type: 3}
+  - index: 1
+    unlocked: {fileID: 21300000, guid: 86a39ae2f26809e42ad3de4c6bbe537c, type: 3}
+    locked: {fileID: 21300000, guid: 4990f5e6caa10e047876ac72cd84e3ab, type: 3}
+    cost: 5
+    muzzleFlashPositions: {x: 359, y: 15}
+    muzzleFlashColors: {r: 0, g: 1, b: 0.50980395, a: 1}
+    gunSound: {fileID: 8300000, guid: d333a3b69f4f29541904ad8f1c78a784, type: 3}
+  - index: 2
+    unlocked: {fileID: 21300000, guid: f06dd8683c381194cb09e9875c73a01e, type: 3}
+    locked: {fileID: 21300000, guid: 3217b288bbd131849935bf9b94d4f629, type: 3}
+    cost: 10
+    muzzleFlashPositions: {x: 316, y: 15}
+    muzzleFlashColors: {r: 1, g: 0, b: 0, a: 1}
+    gunSound: {fileID: 8300000, guid: 658a62f699aa3cb44bf4e5126cc9cc3b, type: 3}
+  - index: 3
+    unlocked: {fileID: 21300000, guid: 0274a6e6aec464a42bcf615edbfdca84, type: 3}
+    locked: {fileID: 21300000, guid: 3a3e82bd1421c49469b59da7f7241de2, type: 3}
+    cost: 15
+    muzzleFlashPositions: {x: 293, y: 33}
+    muzzleFlashColors: {r: 0, g: 0.56078434, b: 1, a: 1}
+    gunSound: {fileID: 8300000, guid: aa9e811ab688fca419d9c953a9b83f36, type: 3}
+  - index: 4
+    unlocked: {fileID: 21300000, guid: b6fe60e448a2ccf469469ebb53d033df, type: 3}
+    locked: {fileID: 21300000, guid: e9ea6fbfbc0582b4988142330536c1c4, type: 3}
+    cost: 20
+    muzzleFlashPositions: {x: 348, y: 24}
+    muzzleFlashColors: {r: 1, g: 0, b: 0.7607844, a: 1}
+    gunSound: {fileID: 8300000, guid: a3e7c408f23397d49b0358fe02f23cb2, type: 3}
+  - index: 5
+    unlocked: {fileID: 21300000, guid: be09725096c0636408b3c3c26c5cc526, type: 3}
+    locked: {fileID: 21300000, guid: 485e1f66328c0544d8f0132e2fbb18d1, type: 3}
+    cost: 25
+    muzzleFlashPositions: {x: 0, y: 0}
+    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
+    gunSound: {fileID: 8300000, guid: 8be0d79ac17bc06478022b7ebc92ec1b, type: 3}
+  - index: 6
+    unlocked: {fileID: 21300000, guid: 27acbd5e46c6942488ffd56fdbe8da51, type: 3}
+    locked: {fileID: 21300000, guid: 068b730887160cd489f329bea586fccb, type: 3}
+    cost: 30
+    muzzleFlashPositions: {x: 0, y: 0}
+    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
+    gunSound: {fileID: 8300000, guid: 97bc8ba282b3834408958258c7168816, type: 3}
+  - index: 7
+    unlocked: {fileID: 21300000, guid: 1e4c4e84ad6060940a670ba8aabadad1, type: 3}
+    locked: {fileID: 21300000, guid: 8f03ccb95d8585b48864f9a8e9ed46a8, type: 3}
+    cost: 35
+    muzzleFlashPositions: {x: 0, y: 0}
+    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
+    gunSound: {fileID: 8300000, guid: b11e42cf49c449c4494cc8e0f83fbae1, type: 3}
+  - index: 8
+    unlocked: {fileID: 21300000, guid: 54f8f3e7a0209014aa8ebfed7b8483e3, type: 3}
+    locked: {fileID: 21300000, guid: e7db58771ed7ee24bbdbd3940113d100, type: 3}
+    cost: 40
+    muzzleFlashPositions: {x: 0, y: 0}
+    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
+    gunSound: {fileID: 8300000, guid: 526c9510fdc827f4b9f1293d73157013, type: 3}
+  - index: 9
+    unlocked: {fileID: 21300000, guid: 1ca808a5d25980a4eb07627337f51a48, type: 3}
+    locked: {fileID: 21300000, guid: 2a8dea36f09fd5346bf0cc0a3ddd4c4b, type: 3}
+    cost: 50
+    muzzleFlashPositions: {x: 0, y: 0}
+    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
+    gunSound: {fileID: 8300000, guid: c939e673b00ee7e409a54de91e9f6bdf, type: 3}
+  - index: 10
+    unlocked: {fileID: 21300000, guid: e06939d0a9f21504b8a02d49a43244a8, type: 3}
+    locked: {fileID: 21300000, guid: b7074c1d31995fb42960766b8095e42a, type: 3}
+    cost: 60
+    muzzleFlashPositions: {x: 0, y: 0}
+    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
+    gunSound: {fileID: 8300000, guid: 4b9d6a51db38d95468a50bd8232dbba2, type: 3}
+  - index: 11
+    unlocked: {fileID: 21300000, guid: 02ff7305d84ca0649a1794b9cff03707, type: 3}
+    locked: {fileID: 21300000, guid: e60746d4dead18642b3ab007e03b8bde, type: 3}
+    cost: 70
+    muzzleFlashPositions: {x: 0, y: 0}
+    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
+    gunSound: {fileID: 8300000, guid: 3bed6d18d0b580c4d8a4ab32efe0abcd, type: 3}
+  - index: 12
+    unlocked: {fileID: 21300000, guid: 51d60b90370040b419214ecf14e5ddd7, type: 3}
+    locked: {fileID: 21300000, guid: b142662f5ec72844497972fcfae2aa4c, type: 3}
+    cost: 80
+    muzzleFlashPositions: {x: 0, y: 0}
+    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
+    gunSound: {fileID: 8300000, guid: 710a1a1c67e8b66438e4dfa435dff720, type: 3}
+  - index: 13
+    unlocked: {fileID: 21300000, guid: edcaaf1a4c382de4eab78e73c4afbd3b, type: 3}
+    locked: {fileID: 21300000, guid: e7247945eb4988948a25c2fea41158c6, type: 3}
+    cost: 90
+    muzzleFlashPositions: {x: 0, y: 0}
+    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
+    gunSound: {fileID: 8300000, guid: 52fb8991665c09e4eb7a37a7a14d0a59, type: 3}
+  - index: 14
+    unlocked: {fileID: 21300000, guid: b05859cb4880fb642915678c3f9e7690, type: 3}
+    locked: {fileID: 21300000, guid: 5522fe572b2206d45b42803ceed94031, type: 3}
+    cost: 100
+    muzzleFlashPositions: {x: 0, y: 0}
+    muzzleFlashColors: {r: 0, g: 0, b: 0, a: 0}
+    gunSound: {fileID: 8300000, guid: f5044cc10930f4c4aad0f9e8a098f3aa, type: 3}
+  audioSource: {fileID: 1651512809}
+  gunAnimator: {fileID: 1498302575}
+  muzzleFlashImage: {fileID: 1298312751}
 --- !u!1 &398813372
 GameObject:
   m_ObjectHideFlags: 0

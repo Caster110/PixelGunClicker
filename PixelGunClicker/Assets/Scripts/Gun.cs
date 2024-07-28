@@ -8,23 +8,37 @@ public class Gun
     [SerializeField] private Sprite unlocked;
     [SerializeField] private Sprite locked;
     [SerializeField] private int cost;
-    [SerializeField] private bool isAvailable;
     [SerializeField] private Vector2 muzzleFlashPositions;
     [SerializeField] private Color muzzleFlashColors;
-    public Sprite UnlockedSprite => unlocked;
-    public Sprite LockedSprite => locked;
+    [SerializeField] private AudioClip gunSound;
+    private bool isAvailable;
+    public Sprite Unlocked => unlocked;
+    public Sprite Locked => locked;
     public int Cost => cost;
     public bool IsAvailable => isAvailable;
     public Vector2 MuzzleFlashPositions => muzzleFlashPositions;
     public Color MuzzleFlashColors => muzzleFlashColors;
+    public AudioClip GunSound => gunSound;
     Gun()
     {
-        isAvailable = YandexGame.savesData.GunsAvailability[index];
-        EventBus.ClicksIncreased += CheckAvailability;
+        LoadSaves();
     }
-    private void CheckAvailability(int value)
+
+    private void LoadSaves()
     {
-        if (value >= cost)
+        if (!YandexGame.SDKEnabled)
+        {
+            isAvailable = YandexGame.savesData.Availability[index];
+            if (!isAvailable)
+                EventBus.ClicksIncreased += CheckAvailability;
+            YandexGame.GetDataEvent -= LoadSaves;
+        }
+        else
+            YandexGame.GetDataEvent += LoadSaves;
+    }
+    public void CheckAvailability()
+    {
+        if (Bank.Clicks >= cost)
             SetAvailable();
     }
     private void SetAvailable()
@@ -32,7 +46,6 @@ public class Gun
         isAvailable = true;
         EventBus.ClicksIncreased -= CheckAvailability;
         EventBus.GunBecameAvailable?.Invoke();
-        YandexGame.savesData.GunsAvailability[index] = true;
-        YandexGame.SaveProgress();
+        YandexGame.savesData.Availability[index] = true;
     }
 }

@@ -101,6 +101,7 @@ namespace YG
                 CallInitYG();
                 GetPayments();
             }
+            
         }
 
         [DllImport("__Internal")]

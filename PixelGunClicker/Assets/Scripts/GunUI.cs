@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using YG;
 public class GunUI : MonoBehaviour
 {
     [SerializeField] private TMP_Text costOfLockedGun;
@@ -11,14 +12,16 @@ public class GunUI : MonoBehaviour
     [SerializeField] private Button prev;
     [SerializeField] private Button gun;
     [SerializeField] private Gun[] guns;
-    [SerializeField] private AudioClip[] gunSounds;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private Animator gunAnimator;
     [SerializeField] private Image muzzleFlashImage;
-    private int currentGunIndex = 0;
     private Coroutine muzzleFlashCoroutine;
+    private int currentGunIndex = 0;
     private void Start()
     {
+        for (int i = 0; i < guns.Length; i++)
+            guns[i].CheckAvailability();
+        YandexGame.SaveProgress();
         gun.onClick.AddListener(HandleGunClick);
         next.onClick.AddListener(() => HandleChange(1));
         prev.onClick.AddListener(() => HandleChange(-1));
@@ -28,7 +31,7 @@ public class GunUI : MonoBehaviour
     private void HandleChange(int direction)
     {
         currentGunIndex += direction;
-        selectedGun.sprite = guns[currentGunIndex].UnlockedSprite;
+        selectedGun.sprite = guns[currentGunIndex].Unlocked;
         HandleButtonsState();
     }
     private void HandleButtonsState()
@@ -58,34 +61,34 @@ public class GunUI : MonoBehaviour
             costOfLockedGun.gameObject.SetActive(true);
             lockedGun.gameObject.SetActive(true);
             costOfLockedGun.text = guns[currentGunIndex + 1].Cost.ToString();
-            lockedGun.sprite = guns[currentGunIndex + 1].LockedSprite;
+            lockedGun.sprite = guns[currentGunIndex + 1].Locked;
             next.gameObject.SetActive(false);
         }
     }
     private void HandleGunClick()
     {
-        PlaySound(currentGunIndex);
-        ShowMuzzleFlash(currentGunIndex);
+        PlaySound();
+        ShowMuzzleFlash();
         PlayRecoilAnimation();
     }
-    private void PlaySound(int index)
+    private void PlaySound()
     {
-        audioSource.clip = gunSounds[index];
+        audioSource.clip = guns[currentGunIndex].GunSound;
         audioSource.Play();
     }
     private void PlayRecoilAnimation()
     {
         gunAnimator.Play("FireAnim", 0, 0f);
     }
-    private void ShowMuzzleFlash(int index)
+    private void ShowMuzzleFlash()
     {
         if (muzzleFlashCoroutine != null)
         {
             StopCoroutine(muzzleFlashCoroutine);
         }
 
-        var gun = guns[index];
-        SetMuzzleFlash(guns[index].MuzzleFlashPositions, guns[index].MuzzleFlashColors);
+        SetMuzzleFlash(guns[currentGunIndex].MuzzleFlashPositions, 
+            guns[currentGunIndex].MuzzleFlashColors);
     }
 
     private void SetMuzzleFlash(Vector2 position, Color color)

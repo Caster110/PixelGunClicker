@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using YG;
-public class BankUI : Bank
+public class BankUI : MonoBehaviour
 {
     [SerializeField] private Button buyUpgarde;
     [SerializeField] private Button adForMoney;
@@ -13,8 +13,12 @@ public class BankUI : Bank
     [SerializeField] private TMP_Text upgradeCostText;
     [SerializeField] private TMP_Text moneyText;
     [SerializeField] private TMP_Text clicksText;
+    private Bank bank;
     private void Start()
     {
+        YandexGame.ResetSaveProgress();
+        YandexGame.SaveProgress();
+        bank = new Bank();
         UpdateAllUI();
         gun.onClick.AddListener(HandleGunClick);
         buyUpgarde.onClick.AddListener(HandlePurchaseClick);
@@ -24,21 +28,21 @@ public class BankUI : Bank
     }
     private void HandleGunClick()
     {
-        IncreaseClicks(RewardForClick);
-        IncreaseMoney(RewardForClick);
+        bank.IncreaseClicks(bank.RewardForClick);
+        bank.IncreaseMoney(bank.RewardForClick);
         UpdateScoreUI();
     }
     private void GiveReward(int id)
     {
         if (id == 0)
-            IncreaseMoney(MoneyRewardForAd);
+            bank.IncreaseMoney(bank.MoneyRewardForAd);
         else
-            IncreaseClicks(ClickRewardForAd);
+            bank.IncreaseClicks(bank.ClickRewardForAd);
         UpdateScoreUI();
     }
     private void HandlePurchaseClick()
     {
-        if(TryBuyUpgrade())
+        if(bank.TryBuyUpgrade())
             UpdateAllUI();
     }
     private void UpdateAllUI()
@@ -48,13 +52,13 @@ public class BankUI : Bank
     }
     private void UpdateScoreUI()
     {
-        moneyText.text = Money.ToString();
-        clicksText.text = Clicks.ToString();
+        moneyText.text = bank.Money.ToString();
+        clicksText.text = Bank.Clicks.ToString();
     }
     private void UpdateCostUI()
     {
-        moneyRewardForAdText.text = MoneyRewardForAd.ToString();
-        clickRewardForAdText.text = ClickRewardForAd.ToString();
-        upgradeCostText.text = UpgradeCost.ToString();
+        moneyRewardForAdText.text = bank.MoneyRewardForAd.ToString();
+        clickRewardForAdText.text = bank.ClickRewardForAd.ToString();
+        upgradeCostText.text = bank.UpgradeCost.ToString();
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 using YG;
-public class Bank : MonoBehaviour
+public class Bank
 {
     public int RewardForClick { get; private set; }
     public int MoneyRewardForAd { get; private set; }
@@ -10,30 +10,40 @@ public class Bank : MonoBehaviour
     public static int Clicks { get; private set; }
     public Bank()
     {
+        if (YandexGame.SDKEnabled)
+            LoadSaves();
+        else
+            YandexGame.GetDataEvent += LoadSaves;
+    }
+    public void LoadSaves()
+    {
         Money = YandexGame.savesData.Money;
         Clicks = YandexGame.savesData.Clicks;
         RewardForClick = YandexGame.savesData.RewardForClick;
         UpgradeCost = YandexGame.savesData.UpgradeCost;
         MoneyRewardForAd = YandexGame.savesData.MoneyRewardForAd;
         ClickRewardForAd = YandexGame.savesData.ClickRewardForAd;
+        YandexGame.GetDataEvent -= LoadSaves;
     }
-    protected void IncreaseClicks(int value)
+    public void IncreaseClicks(int value)
     {
         Clicks += value;
         YandexGame.savesData.Clicks = Clicks;
-        EventBus.ClicksIncreased?.Invoke(Clicks);
+        EventBus.ClicksIncreased?.Invoke();
+        //YandexGame.SaveProgress();
     }
-    protected void IncreaseMoney(int value) 
+    public void IncreaseMoney(int value) 
     {
         Money += value;
         YandexGame.savesData.Money = Money;
+        //YandexGame.SaveProgress();
     }
-    private void IncreaseReward()
+    public void IncreaseReward()
     {
         MoneyRewardForAd += 300;
         ClickRewardForAd += 300;
     }
-    protected bool TryBuyUpgrade()
+    public bool TryBuyUpgrade()
     {
         if (Money >= UpgradeCost)
         {
@@ -41,10 +51,12 @@ public class Bank : MonoBehaviour
             UpgradeCost += 1000;
             IncreaseReward();
             RewardForClick++;
+            YandexGame.savesData.MoneyRewardForAd = MoneyRewardForAd;
+            YandexGame.savesData.ClickRewardForAd = ClickRewardForAd;
             YandexGame.savesData.UpgradeCost = UpgradeCost;
             YandexGame.savesData.RewardForClick = RewardForClick;
             YandexGame.savesData.Money = Money;
-            YandexGame.SaveProgress();
+            //YandexGame.SaveProgress();
             return true;
         }
         return false;
