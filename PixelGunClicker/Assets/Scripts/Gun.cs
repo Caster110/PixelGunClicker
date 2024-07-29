@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UIElements;
 using YG;
 [Serializable]
 public class Gun
@@ -9,6 +10,7 @@ public class Gun
     [SerializeField] private Sprite locked;
     [SerializeField] private int cost;
     [SerializeField] private Vector2 muzzleFlashPositions;
+    [SerializeField] private Vector2 muzzleFlashScales;
     [SerializeField] private Color muzzleFlashColors;
     [SerializeField] private AudioClip gunSound;
     private bool isAvailable;
@@ -17,6 +19,7 @@ public class Gun
     public int Cost => cost;
     public bool IsAvailable => isAvailable;
     public Vector2 MuzzleFlashPositions => muzzleFlashPositions;
+    public Vector2 MuzzleFlashScales => muzzleFlashScales;
     public Color MuzzleFlashColors => muzzleFlashColors;
     public AudioClip GunSound => gunSound;
     Gun()

@@ -87,13 +87,15 @@ public class GunUI : MonoBehaviour
             StopCoroutine(muzzleFlashCoroutine);
         }
 
-        SetMuzzleFlash(guns[currentGunIndex].MuzzleFlashPositions, 
+        SetMuzzleFlash(guns[currentGunIndex].MuzzleFlashPositions,
+             guns[currentGunIndex].MuzzleFlashScales,
             guns[currentGunIndex].MuzzleFlashColors);
     }
 
-    private void SetMuzzleFlash(Vector2 position, Color color)
+    private void SetMuzzleFlash(Vector2 position, Vector2 scale, Color color)
     {
         muzzleFlashImage.rectTransform.anchoredPosition = position;
+        muzzleFlashImage.rectTransform.localScale = scale;
         muzzleFlashImage.color = color;
         muzzleFlashImage.enabled = true;
 
