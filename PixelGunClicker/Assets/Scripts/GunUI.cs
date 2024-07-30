@@ -19,17 +19,23 @@ public class GunUI : MonoBehaviour
     private int currentGunIndex = 0;
     private void Start()
     {
-        YandexGame.ResetSaveProgress();
+        if (YandexGame.SDKEnabled)
+            Initialize();
+        else
+            YandexGame.GetDataEvent += Initialize;
+    }
+    private void Initialize()
+    {
         for (int i = 0; i < guns.Length; i++)
-            guns[i].LoadSaves();
-        //YandexGame.savesData = new SavesYG();
+            guns[i].Initialize();
         YandexGame.SaveProgress();
-        
+
         gun.onClick.AddListener(HandleGunClick);
         next.onClick.AddListener(() => HandleChange(1));
         prev.onClick.AddListener(() => HandleChange(-1));
         EventBus.GunBecameAvailable += HandleButtonsState;
         HandleButtonsState();
+        YandexGame.GetDataEvent -= Initialize;
     }
     private void HandleChange(int direction)
     {

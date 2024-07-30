@@ -10,20 +10,12 @@ public class Bank
     public static int Clicks { get; private set; }
     public Bank()
     {
-        if (YandexGame.SDKEnabled)
-            LoadSaves();
-        else
-            YandexGame.GetDataEvent += LoadSaves;
-    }
-    public void LoadSaves()
-    {
         Money = YandexGame.savesData.Money;
         Clicks = YandexGame.savesData.Clicks;
         RewardForClick = YandexGame.savesData.RewardForClick;
         UpgradeCost = YandexGame.savesData.UpgradeCost;
         MoneyRewardForAd = YandexGame.savesData.MoneyRewardForAd;
         ClickRewardForAd = YandexGame.savesData.ClickRewardForAd;
-        YandexGame.GetDataEvent -= LoadSaves;
     }
     public void IncreaseClicks(int value)
     {

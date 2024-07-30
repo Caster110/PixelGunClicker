@@ -16,7 +16,15 @@ public class BankUI : MonoBehaviour
     private Bank bank;
     private void Awake()
     {
-        YandexGame.ResetSaveProgress();
+        if (YandexGame.SDKEnabled)
+            Initialize();
+        else
+            YandexGame.GetDataEvent += Initialize;
+    }
+    private void Initialize()
+    {
+        YandexGame.GetDataEvent -= Initialize;
+        YandexGame.savesData = new SavesYG();
         YandexGame.SaveProgress();
         bank = new Bank();
         UpdateAllUI();
