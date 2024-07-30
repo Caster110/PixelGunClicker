@@ -14,7 +14,7 @@ public class BankUI : MonoBehaviour
     [SerializeField] private TMP_Text moneyText;
     [SerializeField] private TMP_Text clicksText;
     private Bank bank;
-    private void Start()
+    private void Awake()
     {
         YandexGame.ResetSaveProgress();
         YandexGame.SaveProgress();

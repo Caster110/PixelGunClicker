@@ -22,14 +22,9 @@ public class Gun
     public Vector2 MuzzleFlashScales => muzzleFlashScales;
     public Color MuzzleFlashColors => muzzleFlashColors;
     public AudioClip GunSound => gunSound;
-    Gun()
+    public void LoadSaves()
     {
-        LoadSaves();
-    }
-
-    private void LoadSaves()
-    {
-        if (!YandexGame.SDKEnabled)
+        if (YandexGame.SDKEnabled)
         {
             isAvailable = YandexGame.savesData.Availability[index];
             if (!isAvailable)
@@ -51,4 +46,5 @@ public class Gun
         EventBus.GunBecameAvailable?.Invoke();
         YandexGame.savesData.Availability[index] = true;
     }
+
 }
