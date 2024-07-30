@@ -28,8 +28,6 @@ public class GunUI : MonoBehaviour
     {
         for (int i = 0; i < guns.Length; i++)
             guns[i].Initialize();
-        YandexGame.SaveProgress();
-
         gun.onClick.AddListener(HandleGunClick);
         next.onClick.AddListener(() => HandleChange(1));
         prev.onClick.AddListener(() => HandleChange(-1));
@@ -40,7 +38,7 @@ public class GunUI : MonoBehaviour
     private void HandleChange(int direction)
     {
         currentGunIndex += direction;
-        selectedGun.sprite = guns[currentGunIndex].Unlocked;
+        selectedGun.sprite = guns[currentGunIndex].Sprite;
         HandleButtonsState();
     }
     private void HandleButtonsState()
@@ -70,7 +68,7 @@ public class GunUI : MonoBehaviour
             costOfLockedGun.gameObject.SetActive(true);
             lockedGun.gameObject.SetActive(true);
             costOfLockedGun.text = guns[currentGunIndex + 1].Cost.ToString();
-            lockedGun.sprite = guns[currentGunIndex + 1].Locked;
+            lockedGun.sprite = guns[currentGunIndex + 1].Sprite;
             next.gameObject.SetActive(false);
         }
     }

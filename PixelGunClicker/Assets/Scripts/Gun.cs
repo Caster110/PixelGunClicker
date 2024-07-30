@@ -6,16 +6,14 @@ using YG;
 public class Gun
 {
     [SerializeField] private int index;
-    [SerializeField] private Sprite unlocked;
-    [SerializeField] private Sprite locked;
+    [SerializeField] private Sprite sprite;
     [SerializeField] private int cost;
     [SerializeField] private Vector2 muzzleFlashPositions;
     [SerializeField] private Vector2 muzzleFlashScales;
     [SerializeField] private Color muzzleFlashColors;
     [SerializeField] private AudioClip gunSound;
     private bool isAvailable;
-    public Sprite Unlocked => unlocked;
-    public Sprite Locked => locked;
+    public Sprite Sprite => sprite;
     public int Cost => cost;
     public bool IsAvailable => isAvailable;
     public Vector2 MuzzleFlashPositions => muzzleFlashPositions;

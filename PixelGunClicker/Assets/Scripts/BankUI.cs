@@ -24,8 +24,6 @@ public class BankUI : MonoBehaviour
     private void Initialize()
     {
         YandexGame.GetDataEvent -= Initialize;
-        YandexGame.savesData = new SavesYG();
-        YandexGame.SaveProgress();
         bank = new Bank();
         UpdateAllUI();
         gun.onClick.AddListener(HandleGunClick);

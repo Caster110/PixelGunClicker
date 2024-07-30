@@ -14,9 +14,9 @@ namespace YG
         public int Money = 0;
         public int Clicks = 0;
         public bool[] Availability = new bool[15];
-        public int UpgradeCost = 100;
-        public int MoneyRewardForAd = 300;
-        public int ClickRewardForAd = 300;
+        public int UpgradeCost = 900;
+        public int MoneyRewardForAd = 600;
+        public int ClickRewardForAd = 600;
         public SavesYG()
         {
             Availability[0] = true;

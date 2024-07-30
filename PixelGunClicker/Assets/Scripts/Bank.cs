@@ -1,4 +1,3 @@
-using UnityEngine;
 using YG;
 public class Bank
 {
@@ -22,25 +21,23 @@ public class Bank
         Clicks += value;
         YandexGame.savesData.Clicks = Clicks;
         EventBus.ClicksIncreased?.Invoke();
-        //YandexGame.SaveProgress();
     }
     public void IncreaseMoney(int value) 
     {
         Money += value;
         YandexGame.savesData.Money = Money;
-        //YandexGame.SaveProgress();
     }
     public void IncreaseReward()
     {
-        MoneyRewardForAd += 300;
-        ClickRewardForAd += 300;
+        MoneyRewardForAd += 600;
+        ClickRewardForAd += 600;
     }
     public bool TryBuyUpgrade()
     {
         if (Money >= UpgradeCost)
         {
             Money -= UpgradeCost;
-            UpgradeCost += 1000;
+            UpgradeCost += 900;
             IncreaseReward();
             RewardForClick++;
             YandexGame.savesData.MoneyRewardForAd = MoneyRewardForAd;
@@ -48,7 +45,6 @@ public class Bank
             YandexGame.savesData.UpgradeCost = UpgradeCost;
             YandexGame.savesData.RewardForClick = RewardForClick;
             YandexGame.savesData.Money = Money;
-            //YandexGame.SaveProgress();
             return true;
         }
         return false;

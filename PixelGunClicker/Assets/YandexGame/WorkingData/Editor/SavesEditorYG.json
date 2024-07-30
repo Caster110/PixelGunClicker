@@ -1,5 +1,5 @@
 {
-    "idSave": 2,
+    "idSave": 1,
     "isFirstSession": true,
     "language": "ru",
     "promptDone": false,
@@ -23,7 +23,7 @@
         false,
         false
     ],
-    "UpgradeCost": 100,
-    "MoneyRewardForAd": 300,
-    "ClickRewardForAd": 300
+    "UpgradeCost": 900,
+    "MoneyRewardForAd": 600,
+    "ClickRewardForAd": 600
 }
