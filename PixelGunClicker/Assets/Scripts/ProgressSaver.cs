@@ -4,7 +4,8 @@ public class ProgressSaver : MonoBehaviour
 {
     public void SaveProgress()
     {
-        YandexGame.SaveProgress();
+        YandexGame.SaveCloud();
+        YandexGame.SaveLocal();
         YandexGame.NewLeaderboardScores("ClickRecors", Bank.Clicks);
     }
 }

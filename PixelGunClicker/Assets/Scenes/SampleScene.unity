@@ -537,6 +537,41 @@ MonoBehaviour:
     muzzleFlashScales: {x: 2.5, y: 2.5}
     muzzleFlashColors: {r: 1, g: 0.77647066, b: 0, a: 1}
     gunSound: {fileID: 8300000, guid: f5044cc10930f4c4aad0f9e8a098f3aa, type: 3}
+  - index: 15
+    sprite: {fileID: 21300000, guid: 1e436f325db9b6b4aa3b6e7f23b6aa02, type: 3}
+    cost: 200000
+    muzzleFlashPositions: {x: 680, y: 80}
+    muzzleFlashScales: {x: 3, y: 2}
+    muzzleFlashColors: {r: 1, g: 0.57794005, b: 0, a: 1}
+    gunSound: {fileID: 8300000, guid: 1ee5da076f664564b9816b4a5f8efda4, type: 3}
+  - index: 16
+    sprite: {fileID: 21300000, guid: 5248976a52d5e2643b42dbadcdb551b5, type: 3}
+    cost: 350000
+    muzzleFlashPositions: {x: 750, y: 35}
+    muzzleFlashScales: {x: 3, y: 1}
+    muzzleFlashColors: {r: 0.12797788, g: 1, b: 0.051886797, a: 1}
+    gunSound: {fileID: 8300000, guid: 9d14cfc3ff98e8841969c468387b354b, type: 3}
+  - index: 17
+    sprite: {fileID: 21300000, guid: 1e9a12874d10e684ba1c0f79b9793a14, type: 3}
+    cost: 550000
+    muzzleFlashPositions: {x: 690, y: 44}
+    muzzleFlashScales: {x: 4, y: 2}
+    muzzleFlashColors: {r: 0.87905073, g: 0, b: 1, a: 1}
+    gunSound: {fileID: 8300000, guid: 3a7b3da03c0e1b244b7a1e9270cde10c, type: 3}
+  - index: 18
+    sprite: {fileID: 21300000, guid: 3108337cfa2af394faa6c6b07fed7f3e, type: 3}
+    cost: 777777
+    muzzleFlashPositions: {x: 600, y: 0}
+    muzzleFlashScales: {x: 3, y: 5}
+    muzzleFlashColors: {r: 1, g: 0, b: 0.078178406, a: 1}
+    gunSound: {fileID: 8300000, guid: fc8b2a8e2bd1dd14c88aa1dd711c425c, type: 3}
+  - index: 19
+    sprite: {fileID: 21300000, guid: b032b98cdb8c04240acd7caf12b19df6, type: 3}
+    cost: 999999
+    muzzleFlashPositions: {x: 250, y: 0}
+    muzzleFlashScales: {x: 2, y: 1}
+    muzzleFlashColors: {r: 0.5990566, g: 1, b: 0.98058134, a: 1}
+    gunSound: {fileID: 8300000, guid: af980221055f1bd4fb98878d11116099, type: 3}
   audioSource: {fileID: 1651512809}
   gunAnimator: {fileID: 1498302575}
   muzzleFlashImage: {fileID: 1298312751}
@@ -1559,12 +1594,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 454860154}
-  - {fileID: 1498302571}
   - {fileID: 1836934642}
   - {fileID: 1642274845}
   - {fileID: 1483933952}
   - {fileID: 1422950905}
   - {fileID: 1914238958}
+  - {fileID: 1498302571}
   - {fileID: 1777512905}
   - {fileID: 1712372648}
   - {fileID: 793709010}
@@ -2244,7 +2279,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 00000
+  m_text: 000000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 861c68e23f8a0b94998de140b2285ae2, type: 2}
   m_sharedMaterial: {fileID: -3251436646117735764, guid: 861c68e23f8a0b94998de140b2285ae2, type: 2}
@@ -2271,7 +2306,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12.2
+  m_fontSize: 10.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2908,7 +2943,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 100.1001, y: 0}
+  m_AnchoredPosition: {x: 100.100586, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1836934643

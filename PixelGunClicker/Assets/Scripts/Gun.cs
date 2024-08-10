@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.UIElements;
 using YG;
 [Serializable]
 public class Gun
@@ -20,9 +19,13 @@ public class Gun
     public Vector2 MuzzleFlashScales => muzzleFlashScales;
     public Color MuzzleFlashColors => muzzleFlashColors;
     public AudioClip GunSound => gunSound;
+    public bool isNewGuns => index >= YandexGame.savesData.Availability.Length;
     public void Initialize()
     {
-        isAvailable = YandexGame.savesData.Availability[index];
+        if (isNewGuns)
+            isAvailable = YandexGame.savesData.UpdatedAvailability[index - 15];
+        else
+            isAvailable = YandexGame.savesData.Availability[index];
         if (!isAvailable)
             EventBus.ClicksIncreased += CheckAvailability;
     }
@@ -36,7 +39,9 @@ public class Gun
         isAvailable = true;
         EventBus.ClicksIncreased -= CheckAvailability;
         EventBus.GunBecameAvailable?.Invoke();
-        YandexGame.savesData.Availability[index] = true;
+        if (isNewGuns)
+            YandexGame.savesData.UpdatedAvailability[index - 15] = true;
+        else
+            YandexGame.savesData.Availability[index] = true;
     }
-
 }
